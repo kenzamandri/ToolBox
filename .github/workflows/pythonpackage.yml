@@ -50,9 +50,9 @@ jobs:
       run: |
          make install test clean
 
-      strategy:
-        matrix:
-          python-version: [3.7]
+    strategy:
+      matrix:
+        python-version: [3.7]
 
   # # 🤖 CD paragraph
   # #
