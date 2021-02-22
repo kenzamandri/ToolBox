@@ -1,12 +1,7 @@
 
-import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import GridSearchCV
-from sklearn.pipeline import Pipeline
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.model_selection import cross_validate
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.decomposition import LatentDirichletAllocation
@@ -80,9 +75,9 @@ def testing(data, text_test):
     lda_vectors = lda_model.transform(example_vectorized)
 
     if lda_vectors[0][0] > lda_vectors[0][1]:
-          return "topic 0 :", lda_vectors[0][0]
+          return f"topic 0 :, {lda_vectors[0][0]}"
     else:
-        return "topic 1 :", lda_vectors[0][1]
+        return f"topic 1 :, {lda_vectors[0][1]}"
 
 
 
